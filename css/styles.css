@@ -1,0 +1,216 @@
+:root {
+   /* fonts */
+   --main-font: 'Roboto';
+   --logo-font: 'Raleway';
+
+   /* bg colors */
+   --background-main: #E5E5E5;
+   --background-items: #E7E9FC;
+   --dark-bg: #2E2F42;
+   --second-light-bg: #F4F4FD; /* CLOUD */
+
+   /* text colors */
+   --accent: #4D5AE5; /* IRIS */
+   --main-txt: #434455;
+   --txt-heading: #2E2F42;
+   --hero-txt: #ffffff;
+   --text-dark-theme: #E7E9FC;
+
+   /* buttons and accents */
+   --shadow: rgba(0, 0, 0, 0.15);
+   --hoover-focus: #404BBF;
+   --button: #E7E9FC; /* CORNFLOWER*/
+   --focus-txt: #ffffff;
+}
+
+/* Общие стили элементов для всего сайта */
+body {
+   font-family: var(--main-font), sans-serif;
+   color: var(--main-txt);
+   width: 1440px;
+}
+
+.list {
+   list-style-type: none;
+}
+
+.horizontal-list li {
+   display: inline-block;
+}
+
+.link {
+   text-decoration-line: none;
+}
+
+.button {
+   font-style: inherit;
+}
+
+/* header */
+.header {
+   border-bottom: 1px solid var(--button);
+}
+
+.header-3 {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   letter-spacing: 0.02em;
+   color: var(--txt-heading);
+}
+
+.nav {
+   font-size: 16px;
+   line-height: calc(24 / 26);
+   color: var(--txt-heading);
+   font-weight: 500;
+}
+
+.text {
+   font-size: 16px;
+   line-height: calc(24 / 16);
+   font-weight: 400;
+   color: var(--main-txt);
+}
+
+.contacts-item {
+   color: var(--main-txt);
+}
+
+/* logo */
+.logo {
+   font-family: var(--logo-font), sans-serif;
+   font-size: 18px;
+   text-decoration-line: none;
+   color: var(--accent);
+   width: 115px;
+
+   display: flex;
+   align-items: center;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   font-weight: 800;
+}
+
+.logo>.accent {
+   color: var(--txt-heading);
+}
+
+/* Navigation */
+nav {
+   display: inline-block;
+}
+
+/* hero */
+.hero {
+   background-color: #2E2F42;
+   color: var(--hero-txt);
+   height: 600px;
+   text-align: center;
+
+}
+
+.hero-header {
+   font-weight: 700;
+   font-size: 56px;
+   line-height: calc(60 / 56);
+}
+
+
+.hero-button {
+   background: #4D5AE5;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+   border: none;
+   color: var(--hero-txt);
+   display: flex;
+   align-items: center;
+   letter-spacing: 0.04em;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: calc(24 / 16);
+}
+
+/* about us */
+
+.section-header {
+   font-weight: 700;
+   font-size: 36px;
+   line-height: calc(40 / 36);
+   letter-spacing: 0.02em;
+   color: var(--txt-heading);
+   text-align: center;
+}
+
+.about-us-item {
+   width: 264px;
+}
+
+
+/* our team section */
+
+.our-team {
+   background-color: var(--second-light-bg);
+   text-align: center;
+}
+
+/* footer */
+.footer {
+   background-color: var(--dark-bg);
+   color: var(--second-light-bg)
+}
+
+.accent-dark-theme {
+   color: var(--second-light-bg);
+}
+
+.dark-theme {
+   color: var(--text-dark-theme);
+}
+
+.accent-dark-theme {
+   color: var(--second-light-bg)
+}
+
+/* FOCUS */
+.link:hover,
+.link:focus {
+   color: var(--hoover-focus);
+   cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+   background: var(--hoover-focus);
+   color: var(--focus-txt);
+   cursor: pointer;
+}
+
+
+/* PORTFOLIO */
+
+.filter-button {
+   background: var(--second-light-bg);
+   border: 1px solid var(--button);
+   border-radius: 4px;
+
+   color:var(--accent);
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+}
+
+.portfolio-item {
+   border: 1px solid var(--button)
+}
+
+.portfolio-item-heading {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   /* identical to box height, or 120% */
+   letter-spacing: 0.02em;
+   color: var(--txt-heading);
+}

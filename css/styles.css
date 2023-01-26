@@ -365,6 +365,7 @@ padding: 16px 32px;
    border-radius: 4px;
 
    color:var(--accent);
+   font-family: var(--main-font);
    font-style: normal;
    font-weight: 500;
    font-size: 16px;

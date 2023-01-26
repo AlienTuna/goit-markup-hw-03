@@ -55,7 +55,7 @@ ul, li {
    margin: 0 auto;
 }
 
-/* flex */
+/* flex MARGINS PADDINGS */
 
 /* header */
 
@@ -128,45 +128,6 @@ padding: 16px 32px;
    margin: 0;
 }
 
-/* ====== PORTFOLIO ====== */
-.portfolio-main {
-   padding: 96px 0 120px 0;
-}
-
-/* === BUTTONS === */
-.filter-button {
-   padding: 12px 24px;
-}
-.filter-list,
-.portfolio-item {
-   display: flex;
-   gap: 48px 20px;
-   justify-content: center;
-   flex-wrap: wrap;
-}
-.filter-list {
-   margin-bottom: 72px;
-}
-.filter-item {
-   background: var(--white);
-   border: 1px solid var(--background-items);
-}
-
-/* === ITEMS === */
-.portfolio-item-heading,
-.portfolio-item-text {
-   padding: 0 16px;
-}
-.portfolio-item-heading {
-   margin: 32px 0 0 0;
-}
-.portfolio-item-text {
-   margin: 8px 0 32px 0
-}
-
-
-
-
 /* What are we doing */
 .doing-section {
    padding-bottom: 120px;
@@ -209,6 +170,50 @@ padding: 16px 32px;
    max-width: 264px;
    margin-top: 16px;
 }
+
+/* ====== PORTFOLIO ====== */
+.portfolio-main {
+   padding: 96px 0 120px 0;
+}
+
+/* === BUTTONS === */
+.filter-button {
+   padding: 12px 24px;
+}
+.filter-list,
+.portfolio-item {
+   display: flex;
+   gap: 48px 20px;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.filter-list {
+   margin-bottom: 72px;
+}
+.filter-item {
+   background: var(--white);
+   }
+
+/* === ITEMS === */
+.portfolio-txt {
+   padding: 32px 16px;
+   margin-top: -4px;
+   border: 1px solid var(--background-items);
+   border-top: none;
+}
+.portfolio-item-heading {
+   margin: 0;
+}
+.portfolio-item-text {
+   margin: 8px 0 32px 0
+}
+.portfolio-main-img {
+   margin: 0;
+   padding: 0;
+}
+
+
+
 
 
 /* ============== colors and font =============== */
@@ -368,10 +373,6 @@ padding: 16px 32px;
 .filter-button:hover, 
 .filter-button:focus {
    color: var(--white);
-}
-
-.portfolio-item {
-   border: 1px solid var(--button)
 }
 
 .portfolio-item-heading {

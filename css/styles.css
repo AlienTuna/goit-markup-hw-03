@@ -11,7 +11,7 @@
 
    /* text colors */
    --accent: #4D5AE5; /* IRIS */
-   --main-txt: #434455;
+   --main-txt: #434455; /* SLATE */
    --txt-heading: #2E2F42;
    --hero-txt: #ffffff;
    --text-dark-theme: #E7E9FC;
@@ -20,7 +20,7 @@
    --shadow: rgba(0, 0, 0, 0.15);
    --hoover-focus: #404BBF;
    --button: #E7E9FC; /* CORNFLOWER*/
-   --focus-txt: #ffffff;
+   --white: #ffffff;
 }
 
 /* Общие стили элементов для всего сайта */
@@ -29,7 +29,10 @@ body {
    color: var(--main-txt);
    width: 1440px;
 }
-
+ul, li {
+   margin: 0;
+   padding: 0;
+}
 .list {
    list-style-type: none;
 }
@@ -45,6 +48,170 @@ body {
 .button {
    font-style: inherit;
 }
+
+.container {
+   max-width: 1128px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+/* flex */
+
+/* header */
+
+.header-container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+}
+.logo {
+   margin-right: 76px;
+}
+
+.nav-block {
+   display: flex;
+   flex-direction: row;
+}
+.nav-list {
+   display:flex;
+   gap: 40px;
+   align-items: center;
+}
+.nav-link {
+   padding: 24px 0;
+   color: var(--txt-heading);
+}
+.contacts-list {
+   display: flex;
+   gap: 40px;
+   padding:0;
+}
+.contact-item {
+   color: var(--main-txt);
+}
+
+/* HERO */
+.hero {
+   display:flex;
+   justify-content: center;
+   align-items: center; 
+}
+.hero-button {
+padding: 16px 32px;
+}
+.hero > .container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 48px;
+}
+.hero-header {
+   margin: 0;
+   padding: 0;
+}
+
+/* ABOUT US */
+.about-us-list {
+   display: flex;
+   gap: 24px;
+   justify-content: space-between;
+   align-items: center;
+   padding: 120px 0;
+   margin: 0;
+}
+.about-us-header {
+   margin:0;
+   margin-bottom: 8px;
+}
+.text {
+   margin: 0;
+}
+
+/* ====== PORTFOLIO ====== */
+.portfolio-main {
+   padding: 96px 0 120px 0;
+}
+
+/* === BUTTONS === */
+.filter-button {
+   padding: 12px 24px;
+}
+.filter-list,
+.portfolio-item {
+   display: flex;
+   gap: 48px 20px;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.filter-list {
+   margin-bottom: 72px;
+}
+.filter-item {
+   background: var(--white);
+   border: 1px solid var(--background-items);
+}
+
+/* === ITEMS === */
+.portfolio-item-heading,
+.portfolio-item-text {
+   padding: 0 16px;
+}
+.portfolio-item-heading {
+   margin: 32px 0 0 0;
+}
+.portfolio-item-text {
+   margin: 8px 0 32px 0
+}
+
+
+
+
+/* What are we doing */
+.doing-section {
+   padding-bottom: 120px;
+}
+.doing-list {
+   display: flex;
+   justify-content: space-between;
+}
+.doing-header {
+   margin-bottom: 72px;
+}
+
+/* OUR TEAM */
+.our-team {
+   padding: 120px 0;
+}
+.our-team-header {
+   margin: 0 0 76px 0;
+}
+.our-team-list {
+   display: flex;
+   gap: 24px;
+}
+.our-team-item {
+   padding-bottom: 32px;
+   background: var(--white);
+   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+   border-radius: 0px 0px 4px 4px;
+}
+.our-team-item > .header-3 {
+   margin: 32px 0 8px 0;
+}
+
+/* FOOTER */
+.footer {
+   padding: 100px 0;
+   text-align: start;
+}
+.footer > .container > .text {
+   max-width: 264px;
+   margin-top: 16px;
+}
+
+
+/* ============== colors and font =============== */
 
 /* header */
 .header {
@@ -97,18 +264,15 @@ body {
    color: var(--txt-heading);
 }
 
-/* Navigation */
-nav {
-   display: inline-block;
-}
-
 /* hero */
 .hero {
    background-color: #2E2F42;
    color: var(--hero-txt);
    height: 600px;
    text-align: center;
-
+}
+.hero > .container > .button  {
+   align-items: center;
 }
 
 .hero-header {
@@ -119,8 +283,8 @@ nav {
 
 
 .hero-button {
-   background: #4D5AE5;
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   background: var(--accent);
+   box-shadow: 0px 4px 4px var(--shadow);
    border-radius: 4px;
    border: none;
    color: var(--hero-txt);
@@ -201,6 +365,10 @@ nav {
    font-size: 16px;
    line-height: 24px;
 }
+.filter-button:hover, 
+.filter-button:focus {
+   color: var(--white);
+}
 
 .portfolio-item {
    border: 1px solid var(--button)
@@ -213,4 +381,18 @@ nav {
    /* identical to box height, or 120% */
    letter-spacing: 0.02em;
    color: var(--txt-heading);
+}
+
+/* ==================  HIDDEN ======================== */
+.hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
 }
